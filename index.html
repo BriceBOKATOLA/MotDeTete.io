@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mots de tête version Rodson_desu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <h1>Mots de tête&#8239;!</h1>
+    <main>
+        <div class="form">
+            <h2>Interfaces</h2>
+            <p id="message">&nbsp;</p>
+            <fieldset id="etape1">
+                <legend>Étape 1</legend>
+                <p id="consigne"> Vous avez 6 essais pour deviner (par déduction) le mot de 5 lettres.</p>
+                <p id="nombreEssai">&nbsp;</p>
+                <p class="boutons">
+                    <button type="button" id="btnReset" disabled>Rejouer</button>
+
+                    <button type="button" id="btnJouer">Piger un mot!</button>
+                </p>
+            </fieldset>
+            <fieldset id="etape2" hidden>
+                <legend>Étape 2</legend>
+                <div class="entrerUnMot">
+                    <label for="champMot">Entrer un mot de <strong>5</strong> lettres</label>
+                    <p>
+                        <input id="champMot" name="champMot" type="text" maxlength="5">
+                        <button type="button" id="btnEvaluer">Évaluer</button>
+                    </p>
+                </div>
+
+            </fieldset>
+        </div>
+        <aside>
+            <h2> Code couleur</h2>
+            <!-- dl>(dt+dd)*3 -->
+            <dl>
+                <dt class="jaune">Jaune</dt>
+                <dd>La lettre existe dans le mot mais elle n'est pas bien placée</dd>
+                <dt class="vert">Vert</dt>
+                <dd>La lettre coincide parfaitement</dd>
+                <dt class="gris">Gris</dt>
+                <dd>La lettre est absente du mot pigé au hasard</dd>
+            </dl>
+        </aside>
+        <section class="mastermind">
+            <h2>Résultats</h2>
+            <!-- ol>(li#mot$>p.mot>span*5)*6 --> 
+            <ol>
+                <li id="mot1"><p class="mot"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></p></li>
+                <li id="mot2"><p class="mot"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></p></li>
+                <li id="mot3"><p class="mot"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></p></li>
+                <li id="mot4"><p class="mot"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></p></li>
+                <li id="mot5"><p class="mot"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></p></li>
+                <li id="mot6"><p class="mot"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></p></li>
+            </ol>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
